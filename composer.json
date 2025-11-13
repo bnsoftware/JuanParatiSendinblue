@@ -1,5 +1,5 @@
 {
-    "name": "juanparati/sendinblue",
+    "name": "bnsoftware/juanparatisendinblue",
     "description": "A Sendinblue v3 interface provider for Laravel",
     "type": "library",
     "keywords": [
