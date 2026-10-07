@@ -9,7 +9,7 @@ use Juanparati\Sendinblue\SMS;
 use Juanparati\Sendinblue\SMSTransport;
 use Juanparati\Sendinblue\Template;
 use Juanparati\Sendinblue\TemplateTransport;
-use Symfony\Component\Mailer\Bridge\Sendinblue\Transport\SendinblueTransportFactory;
+use Symfony\Component\Mailer\Bridge\Brevo\Transport\BrevoTransportFactory;
 use Symfony\Component\Mailer\Transport\Dsn;
 
 /**
@@ -28,9 +28,9 @@ class SendinblueProvider extends LaravelServiceProvider
     public function boot(): void
     {
         Mail::extend('sendinblue.v3', function () {
-            return (new SendinblueTransportFactory())->create(
+            return (new BrevoTransportFactory())->create(
                 new Dsn(
-                    'sendinblue+api',
+                    'brevo+api',
                     'default',
                     $this->app['config']['services.sendinblue.v3.key'],
                 )
