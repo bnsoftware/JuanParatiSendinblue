@@ -13,6 +13,9 @@ A Laravel package that provides transactional features like:
 Sendinblue changed the name to Brevo.
 For new Laravel 10+ installations please use the [Brevo Suite library for Laravel](https://github.com/juanparati/BrevoSuite).
 
+This `bnsoftware` fork supports Laravel 10 to 13. Its `sendinblue.v3` mail transport sends through
+Symfony's Brevo mailer (`symfony/brevo-mailer`), which replaces the abandoned `symfony/sendinblue-mailer`.
+
 
 ## Installation
 
